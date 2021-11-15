@@ -1,0 +1,19 @@
+button {
+  height: 30px;
+  width: 30px;
+  outline: 8px ridge rgba(170, 50, 220, .6);
+  border-radius: 2rem;
+  margin: 10px;
+}
+
+button.current {
+  box-shadow: 0 0 0 2px white,
+              0 0 0 4px black;
+}
+
+p {
+  color: #000080;
+  font-size: 200%;
+  font-family: Arial, Verdana, sans-serif;
+  text-align: center;	
+}

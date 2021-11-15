@@ -1,0 +1,15 @@
+{
+	"manifest_version": 3,
+	"name": "H-flash parser",
+	"description": "*.swf parser for site h-flash",
+	"version": "1.0.0",
+	"content_scripts": [{
+		"matches": ["https://h-flash.com/*"],
+		"js": ["content.js"]
+	}],
+	"action": {
+		"default_icon": "icon.png",
+		"default_popup": "popup.html"
+	},
+	"permissions": ["storage", "activeTab", "scripting"]
+}
