@@ -11,10 +11,12 @@ changeColor.addEventListener("click", async () => {
 // The body of this function will be executed as a content script inside the
 // current page
 function setPageBackgroundColor() {
-		if (document.body.getAttribute('itemtype')=='http://schema.org/ItemPage'){
-		var fcE = document.querySelector("[itemprop~=contentUrl][content]").content;
+	if (document.body.getAttribute('itemtype')=='http://schema.org/ItemPage'){
+		var fcE = document.head.querySelector('script').textContent.toString();
+		var out = '';
+		out = fcE.slice(fcE.indexOf("swfpath")+11,fcE.indexOf('"',fcE.indexOf("swfpath")+11))
 		const site = "https://h-flash.com"
-		alert(site + fcE)
+		alert(site + out,' ')
 	}else{
 		alert('Go to the game page, I cant find game')
 	}
